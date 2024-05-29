@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 import 'package:norld/class/statusCheck.dart';
 import 'package:norld/class/userInfo.dart';
 import 'package:norld/global/colors.dart';
-import 'package:norld/global/info.dart';
+import 'package:norld/global/variable.dart';
 import 'package:norld/main.dart';
 import 'package:norld/request/getData.dart';
 import 'package:norld/screens/firstScreen.dart';

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_timer_countdown/flutter_timer_countdown.dart';
 import 'package:norld/global/colors.dart';
-import 'package:norld/global/info.dart';
+import 'package:norld/global/variable.dart';
 
 class TimeWork extends StatelessWidget {
   const TimeWork(

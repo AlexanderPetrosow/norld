@@ -4,14 +4,15 @@ import "package:flutter_svg/flutter_svg.dart";
 import "package:norld/global/colors.dart";
 
 class MainBtn extends StatelessWidget {
-  const MainBtn({
+  MainBtn({
     super.key,
     this.callback,
     this.text = '',
     this.sw = 1,
     this.sh = 0.075,
     this.block = false,
-    this.fontsize
+    this.fontsize,
+    this.fontweight
   });
 
   final Function()? callback;
@@ -20,6 +21,7 @@ class MainBtn extends StatelessWidget {
   final double sh;
   final bool block;
   final double? fontsize;
+  FontWeight? fontweight;
 
   @override
   Widget build(BuildContext context) {
@@ -50,7 +52,7 @@ class MainBtn extends StatelessWidget {
             ),
             Text(
               text,
-              style: TextStyle(color: white, fontSize: fontsize ?? w * 0.04),
+              style: TextStyle(color: white, fontSize: fontsize ?? w * 0.04, fontWeight: fontweight ?? FontWeight.w400),
             ),
           ],
         ),

@@ -9,15 +9,15 @@ import 'package:flutter/material.dart';
 // import 'package:url_launcher/url_launcher.dart';
 
 
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key? key,}) : super(key: key);
+class Testswitch extends StatefulWidget {
+  Testswitch({Key? key,}) : super(key: key);
 
 
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  _TestswitchState createState() => _TestswitchState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _TestswitchState extends State<Testswitch> {
   int value = 0;
   int? nullableValue;
   bool positive = false;

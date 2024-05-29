@@ -9,7 +9,7 @@ import 'package:norld/class/mapPolygon.dart';
 import 'package:norld/class/mapPolygons.dart';
 import 'package:norld/class/userInfo.dart';
 import 'package:norld/global/colors.dart';
-import 'package:norld/global/info.dart';
+import 'package:norld/global/variable.dart';
 import 'package:norld/global/tile_providers.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:norld/request/getData.dart';

@@ -2,19 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:norld/global/colors.dart';
-import 'package:norld/screens/home.dart';
+import 'package:norld/widgets/flagBottomsheet.dart';
 import 'package:norld/widgets/mainBtn.dart';
 import 'package:norld/widgets/paymantVarBottomsheet.dart';
 import 'package:norld/widgets/sortBottomMenu.dart';
 
-class OneLandBottom extends StatefulWidget {
-  const OneLandBottom({super.key});
+class OneMyLandBottom extends StatefulWidget {
+  const OneMyLandBottom({super.key});
 
   @override
-  State<OneLandBottom> createState() => _OneLandBottomState();
+  State<OneMyLandBottom> createState() => _OneMyLandBottomState();
 }
 
-class _OneLandBottomState extends State<OneLandBottom> {
+class _OneMyLandBottomState extends State<OneMyLandBottom> {
   @override
   Widget build(BuildContext context) {
     double w = MediaQuery.of(context).size.width;
@@ -42,10 +42,26 @@ class _OneLandBottomState extends State<OneLandBottom> {
                     Positioned(
                       right: 0,
                       bottom: -h * 0.005,
-                      child: Image.asset(
-                        'assets/images/flag.png',
-                        width: w * 0.16,
-                        height: w * 0.16,
+                      child: GestureDetector(
+                        onTap: () {
+                          Get.back();
+                          Get.bottomSheet(
+                            const FlagBottom(),
+                            backgroundColor: bottomSheet,                            
+                            );
+                        },
+                        child: Container(
+                          width: w * 0.16,
+                          height: w * 0.16,
+                          alignment: Alignment.center,
+                          decoration:
+                              BoxDecoration(shape: BoxShape.circle, color: bg10),
+                          child: 
+                          SvgPicture.asset(
+                            'assets/images/edit.svg',
+                            width: w * 0.048,
+                          ),
+                        ),
                       ),
                     ),
                   ],
@@ -169,24 +185,19 @@ class _OneLandBottomState extends State<OneLandBottom> {
             padding: EdgeInsets.only(top: h * 0.026),
             child: Row(
               children: [
-                GestureDetector(
-                  onTap: () {
-                    Get.offAll(HomePage());
-                  },
-                  child: Container(
-                    width: h * 0.07,
-                    height: h * 0.07,
-                    alignment: Alignment.center,
-                    margin: EdgeInsets.only(right: 4),
-                    decoration: BoxDecoration(
-                      color: snackbar.withOpacity(0.12),
-                      borderRadius: BorderRadius.circular(9),
-                      border: Border.all(width: 1, color: snackbar),
-                    ),
-                    child: SvgPicture.asset(
-                      'assets/images/ctg_map_wt.svg',
-                      width: w * 0.064,
-                    ),
+                Container(
+                  width: h * 0.07,
+                  height: h * 0.07,
+                  alignment: Alignment.center,
+                  margin: EdgeInsets.only(right: 4),
+                  decoration: BoxDecoration(
+                    color: snackbar.withOpacity(0.12),
+                    borderRadius: BorderRadius.circular(9),
+                    border: Border.all(width: 1, color: snackbar),
+                  ),
+                  child: SvgPicture.asset(
+                    'assets/images/ctg_map_wt.svg',
+                    width: w * 0.064,
                   ),
                 ),
                 MainBtn(
@@ -201,7 +212,7 @@ class _OneLandBottomState extends State<OneLandBottom> {
                         const PaymentVarBottom(),
                         backgroundColor: bottomSheet);
                   },
-                  text: 'Купить',
+                  text: 'Продать',
                 ),
               ],
             ),

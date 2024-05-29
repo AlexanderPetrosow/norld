@@ -6,7 +6,7 @@ import 'package:norld/class/statusCheck.dart';
 import 'package:norld/class/emailConfirm.dart';
 import 'package:norld/class/signIn.dart';
 import 'package:norld/class/userInfo.dart';
-import 'package:norld/global/info.dart';
+import 'package:norld/global/variable.dart';
 
 String baseUrl = 'http://api.bsod.fans:44219';
 

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:norld/global/colors.dart';
-import 'package:norld/global/info.dart';
+import 'package:norld/global/variable.dart';
 import 'package:norld/screens/exchange.dart';
 import 'package:norld/screens/getPayment.dart';
 import 'package:norld/screens/sendPayment.dart';

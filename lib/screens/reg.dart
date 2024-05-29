@@ -4,7 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:norld/class/signIn.dart';
 import 'package:norld/global/colors.dart';
-import 'package:norld/global/info.dart';
+import 'package:norld/global/variable.dart';
 import 'package:norld/request/getData.dart';
 import 'package:norld/screens/emailCode.dart';
 import 'package:norld/widgets/customField.dart';

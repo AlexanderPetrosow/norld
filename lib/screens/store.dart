@@ -5,13 +5,11 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:norld/class/userInfo.dart';
 import 'package:norld/global/colors.dart';
-import 'package:norld/global/info.dart';
-import 'package:norld/screens/testswitch.dart';
+import 'package:norld/global/variable.dart';
 import 'package:norld/widgets/bottomMenu.dart';
 import 'package:norld/widgets/filterBottomMenu.dart';
 import 'package:norld/widgets/sortBottomMenu.dart';
 import 'package:norld/widgets/storecard.dart';
-import 'package:rive/rive.dart';
 import 'package:animated_toggle_switch/animated_toggle_switch.dart';
 
 class StorePage extends StatefulWidget {
@@ -38,7 +36,7 @@ class _StorePageState extends State<StorePage>
   List<StoreCard> storeCards = List.generate(
     10,
     (index) =>
-        StoreCard(currency: index % 3), // Alternating currencies for example
+        StoreCard(currency: index % 3,), // Alternating currencies for example
   );
 
   @override
@@ -254,7 +252,7 @@ class _StorePageState extends State<StorePage>
                           controller: tabcontroller,
                           children: <Widget>[
                             ListView(
-                              padding: EdgeInsets.only(bottom: h * 0.1),
+                              padding: EdgeInsets.only(bottom: h * 0.12),
                               children: storeCards
                                   .where((card) => card.currency == switchvalue)
                                   .toList(),

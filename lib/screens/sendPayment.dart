@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:norld/global/colors.dart';
-import 'package:norld/global/info.dart';
+import 'package:norld/global/variable.dart';
 import 'package:norld/widgets/bottomMenu.dart';
 import 'package:norld/widgets/customField.dart';
 import 'package:norld/widgets/mainBtn.dart';

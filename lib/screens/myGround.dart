@@ -1,9 +1,13 @@
 import 'package:bounce/bounce.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:norld/class/userInfo.dart';
 import 'package:norld/global/colors.dart';
 import 'package:norld/widgets/bottomMenu.dart';
+import 'package:norld/widgets/filterBottomMenu.dart';
+import 'package:norld/widgets/mylandcard.dart';
+import 'package:norld/widgets/sortBottomMenu.dart';
 import 'package:rive/rive.dart';
 
 class MyGroundPage extends StatefulWidget {
@@ -87,26 +91,94 @@ class _MyGroundPageState extends State<MyGroundPage> {
             SizedBox(
               height: h * (loading ? 0.86 : 0.865),
               child: Stack(children: [
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    SizedBox(
-                      width: w,
-                      height: h * 0.5,
-                      child: const RiveAnimation.asset(
-                        'assets/images/working.riv',
-                        fit: BoxFit.cover,
+                // Padding(
+                //   padding: EdgeInsets.symmetric(horizontal: w * 0.05),
+                //   child: Column(
+                //     mainAxisAlignment: MainAxisAlignment.start,
+                //     children: [
+                //       Padding(
+                //         padding: EdgeInsets.only(bottom: h * 0.025),
+                //         child: Row(
+                //           crossAxisAlignment: CrossAxisAlignment.start,
+                //           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                //           children: [
+                //             TextButton(
+                //                 onPressed: () {
+                //                   Get.bottomSheet(const FilterMenu(),
+                //                       isScrollControlled: true,
+                //                       backgroundColor: bottomSheet);
+                //                 },
+                //                 child: Row(
+                //                   children: [
+                //                     SvgPicture.asset(
+                //                       'assets/images/filter.svg',
+                //                       width: w * 0.04,
+                //                     ),
+                //                     Padding(
+                //                       padding: EdgeInsets.only(left: w * 0.025),
+                //                       child: Text(
+                //                         'Фильтрация',
+                //                         style: TextStyle(
+                //                             fontSize: 14,
+                //                             fontWeight: FontWeight.w600,
+                //                             color: grey2),
+                //                       ),
+                //                     )
+                //                   ],
+                //                 )),
+                //             TextButton(
+                //                 onPressed: () {
+                //                   Get.bottomSheet(const SortMenu(),
+                //                       isScrollControlled: true,
+                //                       backgroundColor: bottomSheet);
+                //                 },
+                //                 child: Row(
+                //                   children: [
+                //                     Padding(
+                //                       padding: EdgeInsets.only(right: w * 0.0125),
+                //                       child: Text(
+                //                         'Сортировать',
+                //                         style: TextStyle(
+                //                             fontSize: 14,
+                //                             fontWeight: FontWeight.w600,
+                //                             color: white),
+                //                       ),
+                //                     ),
+                //                     Icon(
+                //                       Icons.keyboard_arrow_down,
+                //                       color: white,
+                //                     )
+                //                   ],
+                //                 ))
+                //           ],
+                //         ),
+                //       ),
+                //       Expanded(
+                //         child: ListView(
+                //             padding: EdgeInsets.only(bottom: h * 0.12),
+                //             children: [
+                //               for(var i = 0; i<10;i++)
+                //               MyLandCard()
+                //             ]),
+                //       )
+                //     ],
+                //   ),
+                // ),
+                 SizedBox(
+                        width: w,
+                        height: h * 0.5,
+                        child: const RiveAnimation.asset(
+                          'assets/images/working.riv',
+                          fit: BoxFit.cover,
+                        ),
                       ),
-                    ),
-                    Text(
-                      'В разработке',
-                      style: TextStyle(
-                          color: white,
-                          fontSize: w * 0.07,
-                          fontWeight: FontWeight.w800),
-                    ),
-                  ],
-                ),
+                      Text(
+                        'В разработке',
+                        style: TextStyle(
+                            color: white,
+                            fontSize: w * 0.07,
+                            fontWeight: FontWeight.w800),
+                      ),
                 const BottomMenu(
                   menuId: 1,
                 )
